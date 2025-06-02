@@ -439,7 +439,7 @@ addEventListener('keydown', (e) => {
   if (e.target && e.target.tagName === 'INPUT' && e.target.type === 'text')
     return
 
-  const { key, ctrlKey, altKey, shiftKey } = e
+  const { key, ctrlKey, metaKey, shiftKey } = e
   console.log(key)
 
   if (key === 'Tab') {
@@ -461,7 +461,7 @@ addEventListener('keydown', (e) => {
     return
   }
 
-  if (ctrlKey || altKey) return
+  if (ctrlKey || metaKey) return
 
   if (key === ' ') {
     e.preventDefault()
